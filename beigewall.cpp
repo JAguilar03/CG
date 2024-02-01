@@ -21,45 +21,6 @@ void display() {
         glVertex2f(-1.0f, 0.5f);
     glEnd();
 
-
-    // Draw a vent (white frame with bars)
-    //glColor3f(1.0f, 1.0f, 1.0f);  // RGB values for white
-
-    // Draw frame
-    glBegin(GL_QUADS);
-        glVertex2f(-0.2f, -0.2f);
-        glVertex2f(0.2f, -0.2f);
-        glVertex2f(0.2f, 0.2f);
-        glVertex2f(-0.2f, 0.2f);
-    glEnd();
-
-    // Draw horizontal bars
-    glBegin(GL_QUADS);
-        glVertex2f(-0.2f, 0.1f);
-        glVertex2f(0.2f, 0.1f);
-        glVertex2f(0.2f, 0.05f);
-        glVertex2f(-0.2f, 0.05f);
-
-        glVertex2f(-0.2f, 0.0f);
-        glVertex2f(0.2f, 0.0f);
-        glVertex2f(0.2f, -0.05f);
-        glVertex2f(-0.2f, -0.05f);
-    glEnd();
-
-    // Draw vertical bars
-    glColor3f(0.5f, 0.5f, 0.5f); // RGB for grey
-    glBegin(GL_QUADS);
-        glVertex2f(-0.1f, 0.2f);
-        glVertex2f(-0.05f, 0.2f);
-        glVertex2f(-0.05f, -0.2f);
-        glVertex2f(-0.1f, -0.2f);
-
-        glVertex2f(0.0f, 0.2f);
-        glVertex2f(0.05f, 0.2f);
-        glVertex2f(0.05f, -0.2f);
-        glVertex2f(0.0f, -0.2f);
-    glEnd();
-
     // Swap buffers
     glutSwapBuffers();
 }
