@@ -12,14 +12,32 @@ void display() {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
-    // Draw a beige-colored rectangle (plane)
-    glColor3f(0.76f, 0.6f, 0.42f);  // RGB values for beige
+    // Draw frame
+    glColor3f(1.0f, 1.0f, 1.0f);  // RGB values for white
     glBegin(GL_QUADS);
         glVertex2f(-1.0f, -0.5f);
         glVertex2f(1.0f, -0.5f);
         glVertex2f(1.0f, 0.5f);
         glVertex2f(-1.0f, 0.5f);
     glEnd();
+             
+	// Inside vent
+	glColor3f(0.0f, 0.0f, 0.0f); 
+	glBegin(GL_QUADS);
+        glVertex2f(-0.8f, 0.4f);
+        glVertex2f(0.8f, 0.4f);
+        glVertex2f(0.8f, -0.4f);
+        glVertex2f(-0.8f, -0.4f);
+    glEnd();
+
+	// Middle bar
+	/*
+	glVertex2f(-0.2f, 0.1f);
+    	glVertex2f(0.2f, 0.1f);
+    	glVertex2f(0.2f, -0.1f);
+    	glVertex2f(-0.2f, -0.1f);
+	*/
+  
 
     // Swap buffers
     glutSwapBuffers();
