@@ -112,6 +112,27 @@ void display() {
         glVertex2f(1.1f, -0.8f); // top left 
         glVertex2f(1.9f, -0.8f); // top right
     glEnd();
+    
+    
+    // High Beam on Roof
+    glBegin(GL_QUADS);
+    glColor3f(0.545f, 0.271f, 0.075f);  // Slightly darker brown
+     
+     glVertex2f(0.4f, 0.5f); // bottom right
+     glVertex2f(0.2f, 0.5f); // bottom left
+     glVertex2f(0.5f, 1.0f); // top left
+     glVertex2f(0.7f, 1.0f); // top right
+    glEnd();
+    
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.545f, 0.271f, 0.075f);  // Slightly darker brown
+
+     glVertex2f(0.2f, 0.5f); // bottom left 
+     glVertex2f(0.2f, 1.0f); // top left
+     glVertex2f(0.5f, 1.0f); // top right
+    glEnd();
+    
+    
     // Swap buffers
     glutSwapBuffers();
 }
