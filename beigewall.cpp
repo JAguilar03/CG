@@ -1,4 +1,40 @@
 #include <GL/glut.h>
+#include <cmath>  // Add this line to include the <cmath> header
+
+
+void drawCylinder(float radius, float height, int slices) {
+    glBegin(GL_TRIANGLE_FAN);
+
+    // Center of the circle at the bottom
+    glVertex3f(0.0, 0.0, 0.0);
+
+    // Draw the circle at the bottom
+    for (int i = 0; i <= slices; ++i) {
+        float theta = static_cast<float>(i) / slices * 2.0f * M_PI;
+        float x = radius * cos(theta);
+        float y = radius * sin(theta);
+
+        glVertex3f(x, y, 0.0);
+    }
+
+    glEnd();
+
+    glBegin(GL_TRIANGLE_FAN);
+
+    // Center of the circle at the top
+    glVertex3f(0.0, 0.0, height);
+
+    // Draw the circle at the top
+    for (int i = 0; i <= slices; ++i) {
+        float theta = static_cast<float>(i) / slices * 2.0f * M_PI;
+        float x = radius * cos(theta);
+        float y = radius * sin(theta);
+
+        glVertex3f(x, y, height);
+    }
+
+    glEnd();
+}
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -114,6 +150,8 @@ void display() {
     glEnd();
     
     
+    /////////////////////////////
+    
     // High Beam on Roof
     glBegin(GL_QUADS);
     glColor3f(0.545f, 0.271f, 0.075f);  // Slightly darker brown
@@ -132,7 +170,11 @@ void display() {
      glVertex2f(0.5f, 1.0f); // top right
     glEnd();
     
+    /////////////////////////
     
+    // Draw the cylinder
+    glColor3f(0.5f, 0.5f, 0.5f);
+    drawCylinder(0.3, 0.8, 30);  // Adjust the parameters based on your needs
     // Swap buffers
     glutSwapBuffers();
 }
