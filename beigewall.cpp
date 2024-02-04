@@ -67,6 +67,7 @@ void display() {
         glVertex2f(2.0f, -0.5f);  // top right
         glVertex2f(1.0f, -0.5f);  // top left
     glEnd();
+    
              
 	// Inside vent
 	
@@ -150,17 +151,59 @@ void display() {
     glEnd();
     
     
+    
+      // outline  of frame
+   glColor3f(0.0f, 0.0f, 0.0f);
+   glBegin(GL_LINES);
+   
+   glVertex2f(1.0f, -1.0f); // bottom left
+   glVertex2f(2.0f, -1.0f); // bottom right 
+   
+   glVertex2f(2.0f, -1.0f); // bottom right
+   glVertex2f(2.0f, -0.5f);  // top right
+   
+   glVertex2f(2.0f, -0.5f);  // top right
+   glVertex2f(1.0f, -0.5f);  // top left
+   
+   glVertex2f(1.0f, -0.5f);  // top left
+   glVertex2f(1.0f, -1.0f); // bottom left
+   glEnd();
+    
+    
     /////////////////////////////
     
     // High Beam on Roof
+    
+        glColor3f(0.545f, 0.271f, 0.075f);  // Slightly darker brown
     glBegin(GL_QUADS);
-    glColor3f(0.545f, 0.271f, 0.075f);  // Slightly darker brown
      
      glVertex2f(0.4f, 0.5f); // bottom right
      glVertex2f(0.2f, 0.5f); // bottom left
      glVertex2f(0.5f, 1.0f); // top left
      glVertex2f(0.7f, 1.0f); // top right
     glEnd();
+    
+    //outline
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    
+    glVertex2f(0.4f, 0.5f); // bottom right
+     glVertex2f(0.2f, 0.5f); // bottom left
+     
+     glVertex2f(0.2f, 0.5f); // bottom left
+     glVertex2f(0.5f, 1.0f); // top left
+     
+     glVertex2f(0.5f, 1.0f); // top left
+     glVertex2f(0.7f, 1.0f); // top right
+     
+     glVertex2f(0.7f, 1.0f); // top right
+     glVertex2f(0.4f, 0.5f); // bottom right
+     
+     
+    glEnd();
+    
+    
     
     glBegin(GL_TRIANGLES);
     glColor3f(0.545f, 0.271f, 0.075f);  // Slightly darker brown
@@ -170,9 +213,24 @@ void display() {
      glVertex2f(0.5f, 1.0f); // top right
     glEnd();
     
+    // outline 
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    
+    glVertex2f(0.2f, 0.5f); // bottom left 
+    glVertex2f(0.2f, 1.0f); // top left
+    
+    glVertex2f(0.2f, 1.0f); // top left
+    glVertex2f(0.5f, 1.0f); // top right
+    
+    
+    
     /////////////////////////
     
     // Draw the cylinder
+    
+    
     glColor3f(0.5f, 0.5f, 0.5f);
     drawCylinder(0.3, 0.8, 30);  // Adjust the parameters based on your needs
     // Swap buffers
