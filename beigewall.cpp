@@ -2,17 +2,17 @@
 #include <cmath>  // Add this line to include the <cmath> header
 
 
-void drawCylinder(float radius, float height, int slices) {
+void drawCylinder(float radius, float height, int slices, float xOffset, float yOffset) {
     glBegin(GL_TRIANGLE_FAN);
 
     // Center of the circle at the bottom
-    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(xOffset, yOffset, 0.0);
 
     // Draw the circle at the bottom
     for (int i = 0; i <= slices; ++i) {
         float theta = static_cast<float>(i) / slices * 2.0f * M_PI;
-        float x = radius * cos(theta);
-        float y = radius * sin(theta);
+        float x = xOffset + radius * cos(theta);
+        float y = yOffset + radius * sin(theta);
 
         glVertex3f(x, y, 0.0);
     }
@@ -22,13 +22,13 @@ void drawCylinder(float radius, float height, int slices) {
     glBegin(GL_TRIANGLE_FAN);
 
     // Center of the circle at the top
-    glVertex3f(0.0, 0.0, height);
+    glVertex3f(xOffset, yOffset, height);
 
     // Draw the circle at the top
     for (int i = 0; i <= slices; ++i) {
         float theta = static_cast<float>(i) / slices * 2.0f * M_PI;
-        float x = radius * cos(theta);
-        float y = radius * sin(theta);
+        float x = xOffset + radius * cos(theta);
+        float y = yOffset + radius * sin(theta);
 
         glVertex3f(x, y, height);
     }
@@ -232,7 +232,9 @@ void display() {
     
     
     glColor3f(0.5f, 0.5f, 0.5f);
-    drawCylinder(0.3, 0.8, 30);  // Adjust the parameters based on your needs
+    // Draw the cylinder at the new position (2 units to the right and 1 unit up)
+drawCylinder(0.2, 0.8, 30, -0.8, 0.7);
+
     // Swap buffers
     glutSwapBuffers();
 }
