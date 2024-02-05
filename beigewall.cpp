@@ -88,7 +88,16 @@ void display() {
     // Set up projection matrix for 2D
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluOrtho2D(-3.0, 3.0, -2.0, 2.0); 
+    
+    gluOrtho2D(-6.0, 6.0, -5.0, 5.0);
+    
+    //gluOrtho2D(-2.0, 2.0, -5.0, 1.0);
+    //gluOrtho2D(-5.0, 5.0, -4.0, 4.0);
+    
+    //gluOrtho2D(-2.0, 2.0, -7.0, 1.0);
+    
+    //gluOrtho2D(-3.0, 3.0, -2.0, 2.0); original 
+    // -7 7 -6 6
     
     // Set up model-view matrix
     glMatrixMode(GL_MODELVIEW);
@@ -98,12 +107,21 @@ void display() {
     glColor3f(0.9f, 0.9f, 0.9f);  // RGB values for slight white
     glBegin(GL_QUADS);
     
-        glVertex2f(-2.0f, -1.0f);
-        glVertex2f(2.0f, -1.0f);
-        glVertex2f(2.0f, 1.0f);
-        glVertex2f(-2.0f, 1.0f);
+        glVertex2f(-2.0f, -1.0f); // bottom left
+        glVertex2f(2.0f, -1.0f); // bottom right
+        glVertex2f(2.0f, 1.0f); // top right
+        glVertex2f(-2.0f, 1.0f); // top left
         
     glEnd();
+    
+    // outline for bottom of wall
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glBegin(GL_LINES);
+    
+        glVertex2f(-2.0f, -1.0f); // bottom left
+        glVertex2f(2.0f, -1.0f); // bottom right
+    glEnd();
+    
     
     // Draw frame
     glColor3f(1.0f, 1.0f, 1.0f);  // RGB values for white
@@ -186,10 +204,10 @@ void display() {
     glBegin(GL_QUADS);
     glColor3f(1.0f, 1.0f, 1.0f);  // RGB values for white
   	
+  	glVertex2f(1.1f, -0.7f); // bottom left
         glVertex2f(1.9f, -0.7f); // bottom right
-        glVertex2f(1.1f, -0.7f); // bottom left
-        glVertex2f(1.1f, -0.65f); // top left 
         glVertex2f(1.9f, -0.65f); // top right
+        glVertex2f(1.1f, -0.65f); // top left 
         
     glEnd();
     
@@ -197,10 +215,10 @@ void display() {
     glBegin(GL_QUADS);
     glColor3f(1.0f, 1.0f, 1.0f);  // RGB values for white
   	
+  	glVertex2f(1.1f, -0.85f); // bottom left
   	glVertex2f(1.9f, -0.85f); // bottom right
-        glVertex2f(1.1f, -0.85f); // bottom left
+  	glVertex2f(1.9f, -0.8f); // top right
         glVertex2f(1.1f, -0.8f); // top left 
-        glVertex2f(1.9f, -0.8f); // top right
         
     glEnd();
     
@@ -228,10 +246,10 @@ void display() {
    glColor3f(0.545f, 0.271f, 0.075f);  // Slightly darker brown
    glBegin(GL_QUADS);
      
-        glVertex2f(0.4f, 0.5f); // bottom right
         glVertex2f(0.2f, 0.5f); // bottom left
-        glVertex2f(0.5f, 1.0f); // top left
+        glVertex2f(0.4f, 0.5f); // bottom right
         glVertex2f(0.7f, 1.0f); // top right
+        glVertex2f(0.5f, 1.0f); // top left
         
     glEnd();
     
@@ -316,6 +334,22 @@ void display() {
     // Draw the cylinder at the new position (2 units to the right and 1 unit up)
     drawCylinder(0.2, 0.1, 0.8, 30, -0.8, 0.6); 
 
+
+
+//////////////////////////////////
+//////////////////////////////////
+
+    // Second half of image
+    
+    glColor3f(0.8f, 0.8f, 0.8f);  // RGB values for slight white
+    glBegin(GL_QUADS);
+    
+    	glVertex2f(-2.0f, -5.0f); // bottom left 
+        glVertex2f(2.0f, -5.0f); // bottom right
+        glVertex2f(2.0f, -1.0f); // top right
+        glVertex2f(-2.0f, -1.0f); // top left
+        
+    glEnd();
 
    
 
