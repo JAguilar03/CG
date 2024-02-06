@@ -351,7 +351,61 @@ void display() {
         
     glEnd();
 
-   
+////////////////////////////////// 
+
+    // Desk
+    glColor3f(1.0f, 1.0f, 1.0f); // RGB for white
+    glBegin(GL_QUADS);
+    
+        glVertex2f(1.0f, -5.0f); // bottom left
+        glVertex2f(2.0f, -5.0f); // bottom right 
+        glVertex2f(2.0f, -3.5f); // top right
+        glVertex2f(1.0f, -3.5f); // top left
+        
+    glEnd();
+    
+    // Desk top
+    glColor3f(0.9f, 0.9f, 0.9f); // RGB for white
+    glBegin(GL_QUADS);
+       
+        glVertex2f(1.0f, -3.7f); // bottom left
+        glVertex2f(2.0f, -3.7f); // bottom right
+        glVertex2f(2.0f, -3.5f); // top right
+        glVertex2f(1.0f, -3.5f); // top left
+        
+    glEnd();
+    
+    // outline
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    
+        glVertex2f(1.0f,-3.7f); // bottom left
+        glVertex2f(2.0f, -3.7f); // bottom right
+        
+    glEnd();
+    
+    // Box 
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glBegin(GL_QUADS);
+    
+        glVertex2f(1.0f, -3.5f); // bottom left
+        glVertex2f(1.9f, -3.5f); // bottom right
+        glVertex2f(1.9f, -2.9f); // top right
+        glVertex2f(1.0f, -2.9f); // top left
+        
+    glEnd();
+    
+    // Desk bar door pt 1
+    glColor3f(1.0f, 1.0f, 1.0f); // white
+    glBegin(GL_QUADS);
+    
+        glVertex2f(0.9f, -5.0f); // bottom left
+        glVertex2f(1.0f, -5.0f); // bottom right
+        glVertex2f(1.0f, -2.8f); // top right
+        glVertex2f(0.9f, -2.8f); // top left
+        
+    glEnd();
 
     // Swap buffers
     glutSwapBuffers();
