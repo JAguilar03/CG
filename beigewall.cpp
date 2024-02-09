@@ -552,6 +552,8 @@ glVertex2f(1.8f, -0.95f); // bottom left
         
     glEnd();
     
+//////////////////////////////////
+    
     // Far right ceiling light
     glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_QUADS);
@@ -570,7 +572,7 @@ glVertex2f(1.8f, -0.95f); // bottom left
     
         glVertex2f(1.6f,-1.2f); // bottom left 
         glVertex2f(2.0f,-1.2f); // bottom right 
-        
+   
         glVertex2f(2.0f,-1.2f); // bottom right
         glVertex2f(2.0f,-1.0f); // top right
         
@@ -578,12 +580,142 @@ glVertex2f(1.8f, -0.95f); // bottom left
         glVertex2f(1.6f,-1.0f); // top left
         
         glVertex2f(1.6f,-1.0f); // top left
-        glVertex2f(1.6f,-1.2f); // bottom left 
-        
-        
+        glVertex2f(1.6f,-1.2f); // bottom left     
     
     glEnd();
+    
+    // Side of light
+    glColor3f(0.9f, 0.9f, 0.9f);
+    glBegin(GL_QUADS);
+    
+        glVertex2f(1.5f,-1.3f); // bottom left
+        glVertex2f(1.6f,-1.2f); // bottom right
+        glVertex2f(1.6f,-1.0f); // top right
+        glVertex2f(1.5f, -1.0f); // top left
+        
+    glEnd();
+    
+    // outline
+    
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    
+        glVertex2f(1.5f,-1.3f); // bottom left
+        glVertex2f(1.6f,-1.2f); // bottom right
+        
+        glVertex2f(1.6f,-1.2f); // bottom right
+        glVertex2f(1.6f,-1.0f); // top right
+        
+        glVertex2f(1.6f,-1.0f); // top right
+        glVertex2f(1.5f, -1.0f); // top left
+        
+        glVertex2f(1.5f, -1.0f); // top left
+        glVertex2f(1.5f,-1.3f); // bottom left
+     
+    glEnd();
+    
+    // Bottom of light
+    glColor3f(0.7f, 0.7f, 0.7f);
+    glBegin(GL_QUADS);
+    
+        glVertex2f(1.5f, -1.3f); // bottom left
+        glVertex2f(2.0f,-1.3f); // bottom right
+        glVertex2f(2.0f,-1.2f); // top right
+        glVertex2f(1.6f,-1.2f); // top left
+        
+    glEnd();
+    
+    // outline
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    
+        glVertex2f(1.5f, -1.3f); // bottom left
+        glVertex2f(2.0f,-1.3f); // bottom right
+        
+        glVertex2f(2.0f,-1.3f); // bottom right
+        glVertex2f(2.0f,-1.2f); // top right
+        
+        glVertex2f(2.0f,-1.2f); // top right
+        glVertex2f(1.6f,-1.2f); // top left
 
+        glVertex2f(1.6f,-1.2f); // top left
+        glVertex2f(1.5f, -1.3f); // bottom left
+        
+    glEnd();
+    
+//////////////////////////////////
+
+    // Left ceiling light
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glBegin(GL_QUADS);
+    
+        glVertex2f(-1.25f,-1.2f); // bottom left
+        glVertex2f(0.1f,-1.2f); // bottom right
+        glVertex2f(0.1f,-1.0f); // top right
+        glVertex2f(-1.25f,-1.0f); // top left
+        
+    glEnd();
+    
+    // outline
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    
+        glVertex2f(-1.25f,-1.2f); // bottom left
+        glVertex2f(0.1f,-1.2f); // bottom right
+        
+        glVertex2f(0.1f,-1.2f); // bottom right
+        glVertex2f(0.1f,-1.0f); // top right
+        
+        glVertex2f(0.1f,-1.0f); // top right
+        glVertex2f(-1.25f,-1.0f); // top left
+
+        glVertex2f(-1.25f,-1.0f); // top left
+        glVertex2f(-1.25f,-1.2f); // bottom left
+        
+    glEnd();
+    
+//////////////////////////////////
+
+    // Broken camera
+    glColor3f(0.6f, 0.6f, 0.6f);
+    glBegin(GL_QUADS);
+    
+        glVertex2f(0.2f, -4.0f); // bottom left
+        glVertex2f(0.3f, -4.0f); // bottom right
+        glVertex2f(0.3f, -3.9f); // top right
+        glVertex2f(0.2f, -3.9f); // top left
+    
+    glEnd();
+    
+    // outline
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    
+        glVertex2f(0.2f, -4.0f); // bottom left
+        glVertex2f(0.3f, -4.0f); // bottom right
+        
+        glVertex2f(0.3f, -4.0f); // bottom right
+        glVertex2f(0.3f, -3.9f); // top right
+        
+        glVertex2f(0.3f, -3.9f); // top right
+        glVertex2f(0.2f, -3.9f); // top left
+
+        glVertex2f(0.2f, -3.9f); // top left
+        glVertex2f(0.2f, -4.0f); // bottom left
+        
+    glEnd();    
+    
+    // Camera lens
+    glColor3f(0.0f, 0.0f, 0.0f);
+    
+     drawCylinder(0.03, 0.03, 0.8, 35, .25, -3.96);
+     
+    glEnd();
+    
     // Swap buffers
     glutSwapBuffers();
 }
