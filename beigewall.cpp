@@ -750,6 +750,91 @@ void display()
       glVertex2f(1.0f,-3.1f); // bottom left
       
     glEnd(); 
+    
+    // Box tape 2
+    glColor3f(0.9f, 0.85f, 0.8f);
+    glBegin(GL_QUADS);
+      glVertex2f(1.5f,-3.45f); // bottom left
+      glVertex2f(1.7f,-3.45f); // bottom right
+      glVertex2f(1.7f,-3.35f); // top right
+      glVertex2f(1.5f,-3.35f); // top left
+    glEnd();
+    
+    // outline
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      
+      glVertex2f(1.5f,-3.45f); // bottom left
+      glVertex2f(1.7f,-3.45f); // bottom right
+      
+      glVertex2f(1.7f,-3.45f); // bottom right
+      glVertex2f(1.7f,-3.35f); // top right
+      
+      glVertex2f(1.7f,-3.35f); // top right
+      glVertex2f(1.5f,-3.35f); // top left
+
+      glVertex2f(1.5f,-3.35f); // top left
+      glVertex2f(1.5f,-3.45f); // bottom left
+      
+    glEnd();
+    
+    // Box tape middle 1
+    glColor3f(0.9f, 0.85f, 0.8f);
+    glBegin(GL_QUADS);
+      glVertex2f(1.3f,-3.2f); // bottom left
+      glVertex2f(1.5f,-3.2f); // bottom right 
+      glVertex2f(1.5f,-3.15f); // top right
+      glVertex2f(1.3f,-3.15f); // top left
+    glEnd();
+    
+    // outline 
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      
+      glVertex2f(1.3f,-3.2f); // bottom left
+      glVertex2f(1.5f,-3.2f); // bottom right 
+      
+      glVertex2f(1.5f,-3.2f); // bottom right 
+      glVertex2f(1.5f,-3.15f); // top right
+      
+      glVertex2f(1.5f,-3.15f); // top right
+      glVertex2f(1.3f,-3.15f); // top left
+
+      glVertex2f(1.3f,-3.15f); // top left
+      glVertex2f(1.3f,-3.2f); // bottom left
+      
+    glEnd();
+    
+    // Box tape middle 2
+    glColor3f(0.9f, 0.85f, 0.8f);
+    glBegin(GL_QUADS);
+      glVertex2f(1.3f,-3.29f); // bottom left
+      glVertex2f(1.5f,-3.29f); // bottom right
+      glVertex2f(1.5f,-3.24f); // top right
+      glVertex2f(1.3f,-3.24f); // top left
+    glEnd();
+    
+    // outline
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    
+      glVertex2f(1.3f,-3.29f); // bottom left
+      glVertex2f(1.5f,-3.29f); // bottom right
+      
+      glVertex2f(1.5f,-3.29f); // bottom right
+      glVertex2f(1.5f,-3.24f); // top right
+      
+      glVertex2f(1.5f,-3.24f); // top right
+      glVertex2f(1.3f,-3.24f); // top left
+
+      glVertex2f(1.3f,-3.24f); // top left
+      glVertex2f(1.3f,-3.29f); // bottom left
+      
+    glEnd();
+      
    
     // Desk bar door pt 1
     glColor3f(1.0f, 1.0f, 1.0f); // white
