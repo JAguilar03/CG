@@ -96,14 +96,6 @@ void display()
    
     gluOrtho2D(-6.0, 6.0, -5.0, 5.0);
    
-    //gluOrtho2D(-2.0, 2.0, -5.0, 1.0);
-    //gluOrtho2D(-5.0, 5.0, -4.0, 4.0);
-   
-    //gluOrtho2D(-2.0, 2.0, -7.0, 1.0);
-   
-    //gluOrtho2D(-3.0, 3.0, -2.0, 2.0); original
-    // -7 7 -6 6
-   
     // Set up model-view matrix
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -403,6 +395,90 @@ void display()
       glVertex2f(-1.75f, -1.0f); // top left
       glVertex2f(-1.75f, -4.0f); // bottom left
     glEnd();
+    
+    /* This is the rightmost line that starts from
+    the bottom of the vault wall and to the top of the
+    vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.05f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-0.05f, -1.0f);
+    glEnd();
+    
+    /* This is the line #1 that starts from
+    the bottom of the vault wall and to the top of the
+    vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.1, -4.0f);
+      // This is the ending point.
+      glVertex2f(-0.1f, -1.0f);
+    glEnd();
+    
+    /* This is the line #2 that starts from
+    the bottom of the vault wall and to the top of the
+    vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.15f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-0.15f, -1.0f);
+    glEnd();
+    
+    /* This is the line #3 that starts from
+    the bottom of the vault wall and to the top of the
+    vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.2f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-0.2f, -1.0f);
+    glEnd();
+    
+    /* This is the line #4 that starts from
+    the bottom of the vault wall and to the top of the
+    vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.25f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-0.25f, -1.0f);
+    glEnd();
+    
+     /* This is the line #5 that starts from
+    the bottom of the vault wall and to the top of the
+    vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.3f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-0.3f, -1.0f);
+    glEnd();
+    
+     /* This is the line #6 that starts from
+    the bottom of the vault wall and to the top of the
+    vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.35f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-0.35f, -1.0f);
+    glEnd();
    
     // This is the vault doorway.
     glColor3f(0.0f, 0.0f, 0.0f);
@@ -425,29 +501,6 @@ void display()
       glVertex2f(-1.35f, -1.5f); // top left  
       glVertex2f(-1.35f, -1.5f); // top left
       glVertex2f(-1.35f, -4.0f); // bottom left
-    glEnd();
-   
-    // This is the vault hinges.
-    glColor3f(0.65f, 0.65f, 0.65f);
-    glBegin(GL_QUADS);
-      glVertex2f(-0.5f, -4.0f); // bottom left
-      glVertex2f(-0.4f, -4.0f); // bottom right
-      glVertex2f(-0.4f, -1.5f); // top right
-      glVertex2f(-0.5f, -1.5f); // top left
-    glEnd();
-    
-    // This is the outline of the vault hinges.
-    glColor3f(0.0f, 0.0f, 0.0f);
-    glLineWidth(1);
-    glBegin(GL_LINES);
-      glVertex2f(-0.5f, -4.0f); // bottom left
-      glVertex2f(-0.4f, -4.0f); // bottom right  
-      glVertex2f(-0.4f, -4.0f); // bottom right
-      glVertex2f(-0.4f, -1.5f); // top right  
-      glVertex2f(-0.4f, -1.5f); // top right
-      glVertex2f(-0.5f, -1.5f); // top left  
-      glVertex2f(-0.5f, -1.5f); // top left
-      glVertex2f(-0.5f, -4.0f); // bottom left
     glEnd();
    
     // This is the vault door.
@@ -473,6 +526,387 @@ void display()
       glVertex2f(-1.15f, -4.10f); // bottom left
     glEnd();
     
+    /* This is the leftmost line that starts from the
+    bottom of the vault wall to the top of the vault wall. */
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.70f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-1.70f, -1.0f);
+    glEnd();
+    
+     /* This is the line #1 that starts from the
+    bottom of the vault wall to the line that is to the
+    bottom of the top of the vault wall. */
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.65f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-1.65f, -1.05f);
+    glEnd();
+    
+    /* This is the line #2 that starts from the
+    bottom of the vault wall to the line that is to the
+    bottom of the top of the vault wall. */
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.6f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-1.6f, -1.05f);
+    glEnd();
+    
+    /* This is the line #3 that starts from the
+    bottom of the vault wall to the line that is to the
+    bottom of the top of the vault wall. */
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.55f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-1.55f, -1.05f);
+    glEnd();
+    
+     /* This is the line #4 that starts from the
+    bottom of the vault wall to the line that is to the
+    bottom of the top of the vault wall. */
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.5f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-1.5f, -1.05f);
+    glEnd();
+    
+    /* This is the line that starts from the
+    bottom of the vault wall to the line that is to the bottom
+    of the top of the vault wall. */
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.45f, -4.0f);
+      // This is the ending point.
+      glVertex2f(-1.45f, -1.05f);
+    glEnd();
+    
+    /* This is the line that starts from the edge of the vault
+    doorway and goes to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.35f, -1.5f);
+      // This is the ending point.
+      glVertex2f(-1.45f, -1.5f);
+    glEnd();
+    
+     /* This is the line that goes from the leftmost line
+    that starts from the bottom of the vault wall to the
+    top of the vault wall to the left ceiling light.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.70f, -1.05f);
+      // This is the ending point.
+      glVertex2f(-1.25f, -1.05f);
+    glEnd();
+    
+      // This is the vault hinges.
+    glColor3f(0.65f, 0.65f, 0.65f);
+    glBegin(GL_QUADS);
+      glVertex2f(-0.5f, -4.0f); // bottom left
+      glVertex2f(-0.4f, -4.0f); // bottom right
+      glVertex2f(-0.4f, -1.5f); // top right
+      glVertex2f(-0.5f, -1.5f); // top left
+    glEnd();
+    
+    // This is the outline of the vault hinges.
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      glVertex2f(-0.5f, -4.0f); // bottom left
+      glVertex2f(-0.4f, -4.0f); // bottom right  
+      glVertex2f(-0.4f, -4.0f); // bottom right
+      glVertex2f(-0.4f, -1.5f); // top right  
+      glVertex2f(-0.4f, -1.5f); // top right
+      glVertex2f(-0.5f, -1.5f); // top left  
+      glVertex2f(-0.5f, -1.5f); // top left
+      glVertex2f(-0.5f, -4.0f); // bottom left
+    glEnd();
+   
+    /* This is the line that goes from the top of the
+    vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.4f, -1.5f);
+      // This is the ending point.
+      glVertex2f(-0.4f, -1.0f);
+    glEnd();
+    
+    /* This is the line that goes from the line that goes
+    from the top of the vault hinges to the top of the vault
+    wall to the line that goes from the bottom of the vault
+    wall to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.4f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.45f, -1.40f);
+    glEnd();
+    
+    /* This is line #1 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.4f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.4f, -1.05f);
+    glEnd();
+    
+    /* This is line #2 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.35f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.35f, -1.05f);
+    glEnd();
+    
+    /* This is line #3 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.3f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.3f, -1.05f);
+    glEnd();
+    
+    /* This is line #4 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.25f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.25f, -1.05f);
+    glEnd();
+    
+     /* This is line #5 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.2f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.2f, -1.05f);
+    glEnd();
+    
+    /* This is line #6 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.15f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.15f, -1.05f);
+    glEnd();
+    
+    /* This is line #7 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.1f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.1f, -1.05f);
+    glEnd();
+    
+    /* This is line #8 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.05f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.05f, -1.05f);
+    glEnd();
+    
+    /* This is line #9 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.0f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-1.0f, -1.05f);
+    glEnd();
+    
+    /* This is line #10 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.95f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.95f, -1.05f);
+    glEnd();
+    
+       /* This is line #11 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.9f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.9f, -1.05f);
+    glEnd();
+    
+    /* This is line #12 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.85f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.85f, -1.05f);
+    glEnd();
+    
+     /* This is line #13 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.8f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.8f, -1.05f);
+    glEnd();
+    
+    /* This is line #14 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.75f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.75f, -1.05f);
+    glEnd();
+    
+    /* This is line #15 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.7f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.7f, -1.05f);
+    glEnd();
+    
+    /* This is line #16 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.65f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.65f, -1.05f);
+    glEnd();
+    
+    /* This is line #17 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.6f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.6f, -1.05f);
+    glEnd();
+    
+    /* This is line #18 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.55f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.55f, -1.05f);
+    glEnd();
+    
+    /* This is line #19 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.5f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.5f, -1.05f);
+    glEnd();
+    
+    /* This is line #20 that goes from the line that goes from the top
+    of the vault wall to the top of the vault wall to the line that goes
+    from the top of the vault hinges to the top of the vault wall.*/
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.45f, -1.40f);
+      // This is the ending point.
+      glVertex2f(-0.45f, -1.05f);
+    glEnd();
+    
     // This is the vault door edge.
     glColor3f(0.35f, 0.35f, 0.35f);
     glBegin(GL_QUADS);
@@ -494,6 +928,27 @@ void display()
       glVertex2f(-1.25f, -1.5f); // top left  
       glVertex2f(-1.25f, -1.5f); // top left
       glVertex2f(-1.25f, -4.00f); // bottom left
+    glEnd();
+    
+    // This is the line that goes between the top and bottom
+    // of the middle of the vault door edge.
+    glColor3f(0.2f, 0.2f, 0.2f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.2f, -4.05f);
+      // This is the ending point.
+      glVertex2f(-1.2f, -1.45f);
+    glEnd();
+    
+        // This is the line that goes between the vault hinges.
+    glColor3f(0.4f, 0.4f, 0.4f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-0.75f, -1.80f);
+      // This is the ending point.
+      glVertex2f(-0.75f, -3.5f);
     glEnd();
     
     // This is the long vault hinge.
