@@ -886,6 +886,17 @@ void display()
       glVertex2f(-1.25f, -4.00f); // bottom left
     glEnd();
     
+    // This is the line that goes between the top and bottom
+    // of the middle of the vault door edge.
+    glColor3f(0.2f, 0.2f, 0.2f);
+    glLineWidth(1);
+    glBegin(GL_LINES);
+      // This is the starting point.
+      glVertex2f(-1.2f, -4.05f);
+      // This is the ending point.
+      glVertex2f(-1.2f, -1.45f);
+    glEnd();
+    
     // This is the line that goes between the vault hinges.
     glColor3f(0.4f, 0.4f, 0.4f);
     glLineWidth(1);
